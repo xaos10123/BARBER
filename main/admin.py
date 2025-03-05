@@ -1,3 +1,15 @@
 from django.contrib import admin
 
-# Register your models here.
+from main.models import Master, Service, Visit
+
+@admin.register(Master)
+class MasterAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Visit)
+class VisitAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    pass
