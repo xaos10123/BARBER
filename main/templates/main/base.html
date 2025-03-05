@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="{% static "css/main.css" %}">
     <title>БАРБЕР</title>
 </head>
-<body class="container">
+<body class="container" style="background-color: rgb(37, 37, 37);">
 
     <header class="row d-flex align-items-center header">
         <div class="col col-md-4">
             <a class="btn btn-outline-light fs-2 fw-bold mb-3 w-100">
                 БАРБЕР
-                <p class="fs-6 m-0">Как стиль жизни</p>
+                <p class="fs-6 m-0 text-secondary">Как стиль жизни</p>
             </a>
             
         </div>
 
-        <div class="col col-md-8 d-flex justify-content-end pe-0">
+        <div class="col col-md-8 d-flex justify-content-center pb-md-0 pb-3 justify-content-md-end">
             {% include "main/include_menu.html" %}
         </div>
     </header>     
 
-    <main>
-
-        {% block content %}{% endblock content %}
+    <main class="container">
+        
+        {% block content %}{% endblock content %}               
 
     </main>
 
