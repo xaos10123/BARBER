@@ -2,9 +2,10 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 
 from main.forms import VisitForm
+from main.models import Master
 
 MENU = [
-    {"title": "Главная", "url": "main_page"},
+    {"title": "Главная", "url": "#main_page"},
     {'title': 'Мастера', 'url': '#masters'},
     {'title': 'Услуги', 'url': '#services'},
     {'title': 'Запись на стрижку', 'url': '#orderForm'},
@@ -17,5 +18,7 @@ class MainPageView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["menu"] = MENU
+        context["masters"] = Master.objects.all()
+
         return context
     

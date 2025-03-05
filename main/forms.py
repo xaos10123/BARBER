@@ -8,6 +8,6 @@ class VisitForm(forms.ModelForm):
         model = Visit
         fields = ["name", "phone", "comment", "master", "services"]
         widgets = {
-            "master": forms.Select(attrs={"class": "form-control"}),
-            "services": forms.SelectMultiple(attrs={"class": "form-control"}),
+            "master": forms.Select(attrs={"class": "form-select text-center"}),
+            "services": forms.SelectMultiple(attrs={"class": "form-select text-center" , "style": "margin-top: 10px;"})
         }
