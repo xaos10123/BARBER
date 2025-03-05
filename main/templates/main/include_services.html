@@ -1,0 +1,14 @@
+<section id="services" class="mb-5">
+    <h2 class="text-center text-light">Прайс лист</h2>
+
+    {% for ser in services %}
+
+        <div class="row text-light text-center border-0 border-bottom border-light p-2">
+            <div class="col">{{ser.name}}</div>
+            <div class="col">{{ser.price}} р</div>
+        </div>
+
+    {% endfor %}
+
+</section>
+

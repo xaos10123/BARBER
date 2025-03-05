@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, TemplateView
 
 from main.forms import VisitForm
-from main.models import Master
+from main.models import Master, Service
 
 MENU = [
     {"title": "Главная", "url": "#main_page"},
@@ -19,6 +19,15 @@ class MainPageView(CreateView):
         context = super().get_context_data(**kwargs)
         context["menu"] = MENU
         context["masters"] = Master.objects.all()
+        context['services'] = Service.objects.all()
 
+        return context
+    
+class ThanksView(TemplateView):
+    template_name = 'main/thanks.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["menu"] = MENU
         return context
     

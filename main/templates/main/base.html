@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static "css/main.css" %}">
     <title>БАРБЕР</title>
 </head>
-<body class="container" style="background-color: rgb(37, 37, 37);">
+<body class="container d-flex flex-column justify-content-between" style="background-color: rgb(37, 37, 37); min-height: 100vh;">
 
     <header class="row d-flex align-items-center header">
         <div class="col col-md-4">
@@ -30,8 +30,13 @@
 
     </main>
 
-    <footer class="row d-flex justify-content-center align-items-center border-0 border-top border-light pt-3 mb-5">
-        {% include "main/include_menu_footer.html" %}
+    <footer class="row  border-0 border-top border-light pt-3 mb-5 text-light">
+        <div class="col-4">
+            г.Нижние трущебы, ул.Груминга, д. 3
+        </div>
+        <div class="col-8 d-flex justify-content-center align-items-center">
+            {% include "main/include_menu_footer.html" %}
+        </div>
     </footer>
 
     <script src="{% static "js/main.js" %}"></script>
