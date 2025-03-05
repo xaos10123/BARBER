@@ -22,7 +22,7 @@ class Service(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название услуги")
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена")
     master = models.ManyToManyField(
-        Master, verbose_name="Мастер", related_name="services"
+        Master, verbose_name="Мастер", related_name="service"
     )
 
     def __str__(self):

@@ -1,4 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  background-color: red;
+  background-color: rgb(37, 37, 37);
   scroll-behavior: smooth;
+}
+
+.header {
+  margin-top: 10px !important;
+  background-color: rgb(37, 37, 37);
+  color: white;
 }/*# sourceMappingURL=main.css.map */
