@@ -1,14 +1,14 @@
-{% for link in menu  %}
+{% for link in menu %}
 
-{% if forloop.last %}
+    {% if forloop.last %}
 
-<a href="{{link.url_name}}" class="btn btn-outline-danger ms-2 fw-bold text-danger">{{link.title}}</a>
+        <a href="{{link.url}}" class="btn btn-outline-danger ms-2 fw-bold">{{link.title}}</a>
 
-{% else %}
+    {% else %}
 
-<a href="{{link.url_name}}" class="btn btn-outline-light mx-2 ">{{link.title}}</a>
+        <a href="{{link.url}}" class="btn btn-outline-light mx-2 ">{{link.title}}</a>
 
-{% endif %}
+    {% endif %}
 
 
 {% endfor %}

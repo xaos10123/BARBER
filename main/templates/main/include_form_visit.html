@@ -1,0 +1,25 @@
+<section class="row d-flex justify-content-center align-items-center m-auto">
+    <div class="col">
+        <p id="orderForm" class="text-light fs-3 text-center">Форма записи</p>
+        <form action="" method="post" style="color:black;">
+            {% csrf_token %}
+
+            
+            <input type="text" id="name" name="name" placeholder="Введите имя" class="form-control mb-1 text-center">
+
+            
+            <input type="text" id="phone" name="phone" placeholder="Введите телефон" class="form-control mb-1 text-center">
+
+            
+            <textarea type="text" id="name" name="comment" placeholder="Введите комментарий" class="form-control mb-3 text-center"></textarea>
+
+            {{form.master}}
+
+            {{form.services}}
+
+            <input type="submit" value="Отправить" class="btn btn-danger mx-auto my-5 w-100 p-2 fs-5">
+
+
+        </form>
+    </div>
+</section>

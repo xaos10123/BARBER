@@ -1,0 +1,14 @@
+{% for link in menu %}
+
+    {% if forloop.last %}
+
+        <a href="{{link.url}}" class="col btn text-light d-flex justify-content-center ms-2 fw-bold">{{link.title}}</a>
+
+    {% else %}
+
+        <a href="{{link.url}}" class="col btn text-light d-flex justify-content-center mx-2 ">{{link.title}}</a>
+
+    {% endif %}
+
+
+{% endfor %}
